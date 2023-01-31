@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tags are for browsers to understand what is that about -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="THIS IS A SURVEY FORM">
+    <meta name="keywords" content="Form, Survey, html, css, javascript"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+    <style>
+        *{
+            margin: 0;
+            /* overflow: hidden; */
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightpink;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Itim';
+            font-size: 3.5em;
+            position: sticky;
+            top: 0;
+            background-color: black;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0 auto 20px auto;
+            padding: 0 30px 20px;
+            border-radius: 20px;
+            height: 100%;
+            width: 40vw;
+            background-color: white;
+        }
+        .main_heading{
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.4em;
+            text-align: center;
+            margin: 10px auto 15px;
+        }
+        .lableHead{
+            font-size: 1.3em;
+            margin-right: 10px;
+        }
+        .input{
+            padding: 5px 10px;
+            width: 50%;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        .dropdown{
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            width: 50%;
+            font-size: 1em;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        .radio{
+            font-size: 1.2em;
+            margin-right: 10%;
+        }
+        #Definitely,#Maybe,#no{
+            margin-right: 2px;
+        }
+        #suggestons{
+            width: 100%;
+        }
+        /* color codes copied form google */
+        #submit{
+            padding: 7px 25px;
+            border-radius: 15px;
+            font-size: 1em;
+            color: white;
+            background: linear-gradient(#42A1EC, #0070C9); 
+            border: 1px solid #0077CC;
+            cursor: pointer;
+        }
+        #submit:hover {
+            background-image: linear-gradient(#51A9EE, #147BCD);
+            border-color: #1482D0;
+            text-decoration: none;
+        }
+
+        #submit:active {
+            background-image: linear-gradient(#3D94D9, #0067B9);
+            border-color: #006DBC;
+            outline: none;
+        }
+
+        @media screen and (max-width:480px) {
+            .container{
+                width: 90%;
+                height: 100%;
+            }
+            .main_heading {
+                font-size: 1.2em;
+                margin: 7px auto 5px;
+            }
+            .lableHead{
+                font-size: 1.2em;
+                margin-right: 5px;
+            }
+            .input{
+                padding: 3px 10px;
+                font-size: 0.9em;
+            }
+            .dropdown{
+                padding: 3px 10px;
+                font-size: 0.9em;
+                font-weight: bold;
+            }
+            .radio{
+                font-size: 1.2em;
+                margin-right: 4%;
+            }
+            #submit{
+                padding: 10px 50px;
+                font-size: 1.5em;
+                margin: 5px 62px;
+            }
+        }
+        @media screen and (min-width:481px) and (max-width:768px) {
+            .container{
+                margin-top: 40px ;
+                width: 90%;
+                height: 100%;
+            }
+            h1{
+                padding: 10px 0;
+                font-size: 12vw;
+            }
+            .main_heading {
+                font-size: 2em;
+                flex-wrap: wrap;
+                margin: 7px 30px 10px;
+            }
+            .lableHead{
+                font-size: 1.6em;
+                margin: 0px 5px 0px 36px;
+            }
+            .input{
+                padding: 5px 10px;
+                font-size: 1.2em;
+            }
+            .dropdown{
+                padding: 5px 10px;
+                font-size: 1.4em;
+                margin: 10px 40px;
+            }
+            .radio{
+                font-size: 1.5em;
+                margin-right: 5%;
+            }
+            #Definitely,#Maybe,#no{
+                margin: 0 5px 0 35px;
+            }
+            #suggestons{
+            margin:0 40px ;
+            width: 80%;
+            }
+            #submit{
+            padding: 10px 80px;
+            font-size: 2em;
+            margin: 5px 145px;
+        }
+        }
+        @media screen and (min-width:769px) and (max-width:1024px){
+            .container{
+                width: 80vw;
+                height: 100%;
+            }
+            h1{
+                font-size:10vw;
+            }
+            .main_heading {
+                font-size: 2.3em;
+                margin: 7px auto 20px;
+            }
+            .lableHead{
+                font-size: 1.95em;
+                margin: 0px 3px;
+            }
+            .input{
+                padding: 5px 15px;
+                font-size: 1.4em;
+            }
+            .dropdown{
+                padding: 8px 20px;
+                font-size: 1.5em;
+                margin: 18px 3px;
+            }
+            .radio{
+                font-size: 1.5em;
+                margin-right: 8%;
+            }
+             #Definitely,#Maybe,#no{
+                margin: 0 5px 0 10px;
+            }
+            #suggestons{
+                margin:0;
+                width: 95%;
+            }
+            #submit{
+                padding: 10px 80px;
+                font-size: 2em;
+                margin: 5px 145px;
+        } 
+        }
+    </style>
+</head>
+<body>
+    <h1>Survey Form</h1>
+    <div class="container">
+        <form action="#" method="get">
+        <h2 class="main_heading"> Let us know how we can improve our service </h2>
+        <label for="Name" class="lableHead">Name:</label> 
+        <input type="text" name="Name" id="Name" required placeholder="Enter your name" class="input">
+        <br><br>
+        <label for="Email" class="lableHead">Email:</label>
+        <input type="email" name="email" id="email" required placeholder="Enter your email" class="input">
+        <br><br>
+        <label for="Age" class="lableHead">Age:</label>
+        <input type="number" name="Age" id="Age" required placeholder="Age"class="input">
+        <br><br>
+        <label for="Phone Number"class="lableHead">Phone Number:</label>
+        <input type="number" name="Phone Number" id="Phone Number" required placeholder="Phone Number" class="input">
+        <br><br>
+        <label for="First time playing Escape Room?" class="lableHead">First time playing Escape Room?</label>
+        <select name="First time playing Escape Room?" id="First time playing Escape Room?" class="dropdown">
+            <option value="Select an option" disabled selected>Select an option</option>
+            <option value="First-Timer">First-Timer</option>
+            <option value="Never Play Before">Never Play Before</option>
+        </select>
+        <br>
+        <!-- by giving the same value in "name" attribute of radio input, only one option will be selected at a time.  -->
+        <label for="recommendation" class="lableHead">Will you recommend this game to your friends?</label> <br><br>
+        <input type="radio" name="recommendation" id="Definitely" value="Definitely">
+        <label for="Definitely" class="radio">Definitely</label>
+        <input type="radio" name="recommendation" id="Maybe" value="Maybe">
+        <label for="Definitely" class="radio">Maybe</label>
+        <input type="radio" name="recommendation" id="no" value="no">
+        <label for="Definitely" class="radio">No</label>
+        <br><br>
+        <label for="suggestons"class="lableHead">Any comments or suggestions?</label>
+        <br><br>
+            <!-- textbox -->
+        <textarea name="suggestions" id="suggestons" cols="30" rows="5" class="input">Enter your comment/suggestions here...
+        </textarea>
+        <br><br>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    </div>
+</body>
+</html>
